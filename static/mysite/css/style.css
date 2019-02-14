@@ -1,0 +1,32 @@
+.col-heading {
+  font-weight: bold;
+  border: 1px solid #c1c1c1;
+  border: 1px solid #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  word-break: break-all;
+
+}
+.row .mycol {
+  border: 1px solid #f0f0f0;
+  border: 1px solid #c1c1c1;
+  border: 1px solid #e7e7e7;
+  padding: 15px;
+  text-align: center;
+  word-break: break-all;
+}
+.big-msg {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 2rem;
+    color: #888888;
+}
+footer .container {
+  padding: 100px 0;
+}
+footer {
+  border-top: 1px solid #c1c1c1;
+  text-align: center;
+  margin-top: 100px;
+}

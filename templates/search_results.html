@@ -1,0 +1,13 @@
+{% for item in data %}
+<div class='row'>
+  <div class='col-md-2 mycol'>{{ item.code }}</div>
+  <div class='col-md-2 mycol'>{{ item.name }}</div>
+  <div class='col-md-2 mycol'>{{ item.open }}</div>
+  <div class='col-md-2 mycol'>{{ item.high }}</div>
+  <div class='col-md-2 mycol'>{{ item.low }}</div>
+  <div class='col-md-2 mycol'>{{ item.close }}</div>
+</div>
+{% endfor %}
+{% if not data %}
+<div class='big-msg'>No search results for your query '{{ name }}'</div>
+{% endif %}

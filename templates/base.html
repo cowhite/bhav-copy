@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="/static/mysite/lib/bootstrap-4.1.1-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/static/mysite/css/style.css" />
+</head>
+<body>
+  {% include "navbar.html" %}
+  <div class='container'>
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer>
+    <div class='container'>
+      <div>Cowhite Software Pvt Ltd</div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="/static/mysite/lib/jquery.js"></script>
+  <script type="text/javascript" src="/static/mysite/js/script.js"></script>
+</body>
+</html>
