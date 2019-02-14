@@ -6,6 +6,8 @@ import redis
 import json
 
 def fetch_and_store_bhavcopy():
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
     conn = redis.Redis(host='localhost', port=6379, db=0)
 
     today = datetime.datetime.now().date()
@@ -28,7 +30,7 @@ def fetch_and_store_bhavcopy():
         day, month, year)
 
     # Fetch file
-    downloaded_zip_files_location = "/home/bhaskar/test/kk16/bhavcopy_zip"
+    downloaded_zip_files_location = os.path.join(BASE_DIR, "bhavcopy_zip")
     if not os.path.isdir(downloaded_zip_files_location):
         os.mkdir(downloaded_zip_files_location)
     file_name = "EQ%s%s%s_CSV.ZIP" % (day, month, year)
@@ -41,7 +43,7 @@ def fetch_and_store_bhavcopy():
         return
 
     # Extract file from zip
-    csv_files_location = "/home/bhaskar/test/kk16/bhavcopy_csv"
+    csv_files_location = os.path.join(BASE_DIR, "bhavcopy_csv")
     if not os.path.isdir(csv_files_location):
         os.mkdir(csv_files_location)
 
